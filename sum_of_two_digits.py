@@ -2,10 +2,10 @@ print("Enter the first number: ")
 first = input()
 print("Enter the second number: ")
 second = input()
-print(int(first) + int(second))
+print( "Sum is: "+ str( float(first) + float(second) ) )
 
 # or
-# first_1 = input("First number: ")
-# second_2 = input("Second number: ")
-# sum = int(first_1) + int(second_2)
+# first_1 = int( input("First number: ") )
+# second_2 = int( input("Second number: ") )
+# sum = first_1 + second_2
 # print(sum)
