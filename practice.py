@@ -6,6 +6,5 @@ is_condition = True
 print("hello " + name_person)
 
 birth = input("Enter your birthyear: ")
-int(birth)
-age = 2025 - birth
+age = 2025 - int(birth)
 print(age)
