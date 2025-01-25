@@ -13,6 +13,15 @@ age = 2025 - int(birth)
 print(age)
 
 
+# string
+course = '''
+Hi john
+How is life
+What are u doing 
+'''#string can be within single double or triple quotes, triple quotes normally used for long messages
+print(course)
+
+
 # string operations
 string = "HellO"
 print( string.upper() )
