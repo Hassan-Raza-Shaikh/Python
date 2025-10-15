@@ -17,7 +17,7 @@ odd_digits = all_reg_digits[1::2]
 
 initial_data = [first_token, middle_tokens_as_tuple, last_token, [even_digits, odd_digits]]
 
-handle_string = "@" + first_token + last_token
+handle_string =first_token + last_token
 
 tag_string = even_digits[::-1]
 
