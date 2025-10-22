@@ -54,3 +54,6 @@ print((a>=b) or (b>0))
 print(m is 5)
 print(m is not n)
 print(m==n)
+
+a=[]
+print(dir(a)) # methods available for int type
