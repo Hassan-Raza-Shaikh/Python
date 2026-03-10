@@ -1,0 +1,31 @@
+student_id,age,gender,study_hours_per_week,attendance_percent,parent_education,previous_gpa,internet_access,extracurricular_participation,sleep_hours_per_night,mental_stress_level,final_exam_score,pass
+1001,20,Male,15,85,Bachelor,3.2,Yes,Yes,7,Medium,78,1
+1002,21,Female,?,90,Master,3.8,Yes,No,6,High,88,1
+1003,19,male,12, 75 ,High School,2.9,No,Yes,5,Medium,65,1
+1004,22,FEMALE,8,60,Bachelor,NaN,Yes,No,4,High,55,0
+1005,20,M,20,95,PhD,3.9,Yes,Yes,8,Low,92,1
+1006,?,Female,5,50,High School,2.1,No,No,3,High,40,0
+1007,23,male,18,88,Master,3.5,Yes,Yes,7,Medium,84,1
+1008,21,Female,10,NaN,Bachelor,3.0,Yes,Yes,6,Medium,72,1
+1009,20,female,16,80,Unknown,3.3,Yes,No,7,Low,76,1
+1010,19,Male,0,45,High School,1.8,No,No,2,High,35,0
+1011,22,Female,25,110,Master,4.0,Yes,Yes,9,Low,99,1
+1012,24,Male,30,85,Bachelor,2.5,Yes,Yes,10,Medium,150,1
+1013,20,Female,14,78,High School,2.7,No,?,6,Medium,68,1
+1014,21,Male,  12 ,82,Bachelor,3.1,Yes,No,?,Low,74,1
+1015,22,female,9,55,High School,2.0,No,No,4,High,48,0
+1016,23,Male,40,92,PhD,3.7,Yes,Yes,5,Low,95,1
+1017,19,Female,11,70,Bachelor,?,Yes,No,6,Medium,60,0
+1018,20,Male,13,77,High School,2.8,No,Yes,7,Medium,69,1
+1019,21,Female,17,85,Master,3.6,Yes,Yes,8,Low,86,1
+1020,22,Male,NaN,65,Bachelor,2.4,Yes,No,5,High,58,0
+1021,23,Female,7,40,High School,1.9,No,No,3,High,30,0
+1022,20,male,15,88,Bachelor,3.4,Yes,Yes,7,Medium,82,1
+1023,21,Female, 18, 93 ,PhD,3.9,Yes,Yes,8,Low,91,1
+1024,19,Male,6,55,High School,2.2,No,No,4,High,45,0
+1025,22,Female,22,97,Master,3.8,Yes,Yes,9,Low,94,1
+1026,20,MALE,13,76,Bachelor,2.9,Yes,Yes,6,Medium,70,1
+1027,21,Female,4,35,High School,1.5,No,No,2,High,20,0
+1028,23,Male,19,89,Master,3.6,Yes,Yes,7,Low,87,1
+1029,22,Female,16,84,Bachelor,3.2,Yes,Yes,6,Medium,80,1
+1030,19,Male,8,60,High School,2.3,No,No,5,High,50,0

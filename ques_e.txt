@@ -1,0 +1,3 @@
+
+pass fail by cassification :log reg and naive classifiers 
+evaluation metrics 
