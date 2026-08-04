@@ -1,0 +1,4 @@
+r,target_modules,target_modules_list,accuracy,trainable_params,total_params,trainable_pct,train_time_sec
+8,['v_lin'],['v_lin'],0.7954971857410882,665858,67620868,0.9846930684178736,131.22142887115479
+8,"['q_lin', 'v_lin']","['q_lin', 'v_lin']",0.8039399624765479,739586,67694596,1.0925332946813067,131.41484999656677
+8,"['q_lin', 'k_lin', 'v_lin', 'out_lin']","['q_lin', 'k_lin', 'v_lin', 'out_lin']",0.8161350844277674,887042,67842052,1.307510568813573,116.9550621509552
