@@ -1,0 +1,69 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: venv/bin/python src/preprocess.py
+    deps:
+    - path: src/preprocess.py
+      hash: md5
+      md5: 70dc99a6c36b6c416a66fd9f9b72489c
+      size: 1044
+    params:
+      params.yaml:
+        data.random_state: 42
+        data.test_size: 0.2
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: e232abd4e98fcb70780b9ead759b357a.dir
+      size: 12438
+      nfiles: 2
+    - path: data/raw
+      hash: md5
+      md5: e4252f5a4c4323643fc8d949298480a7.dir
+      size: 12261
+      nfiles: 1
+  train:
+    cmd: venv/bin/python src/train.py
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: e232abd4e98fcb70780b9ead759b357a.dir
+      size: 12438
+      nfiles: 2
+    - path: src/train.py
+      hash: md5
+      md5: 23ce69f15364255ec810efa3a94c0080
+      size: 2063
+    params:
+      params.yaml:
+        train:
+          model_type: LogisticRegression
+          n_estimators: 100
+          max_depth: 10
+          random_state: 42
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: 061bb44438dc856209eff358232d526b
+      size: 1328
+  evaluate:
+    cmd: venv/bin/python src/evaluate.py
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: e232abd4e98fcb70780b9ead759b357a.dir
+      size: 12438
+      nfiles: 2
+    - path: models/model.pkl
+      hash: md5
+      md5: 061bb44438dc856209eff358232d526b
+      size: 1328
+    - path: src/evaluate.py
+      hash: md5
+      md5: 932f3e961a7803cc40ee9ee02528f734
+      size: 1656
+    outs:
+    - path: models/metrics.json
+      hash: md5
+      md5: 345eb297237d3390d9075719dec2adcb
+      size: 144

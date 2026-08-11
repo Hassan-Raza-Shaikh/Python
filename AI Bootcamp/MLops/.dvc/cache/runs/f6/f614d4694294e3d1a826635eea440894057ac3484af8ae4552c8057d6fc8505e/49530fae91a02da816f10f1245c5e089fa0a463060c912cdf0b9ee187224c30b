@@ -1,0 +1,20 @@
+cmd: venv/bin/python src/evaluate.py
+deps:
+- path: data/processed
+  hash: md5
+  md5: e232abd4e98fcb70780b9ead759b357a.dir
+  size: 12438
+  nfiles: 2
+- path: models/model.pkl
+  hash: md5
+  md5: bf1a4259a19a47c23f231c177a971d2e
+  size: 410847
+- path: src/evaluate.py
+  hash: md5
+  md5: 932f3e961a7803cc40ee9ee02528f734
+  size: 1656
+outs:
+- path: models/metrics.json
+  hash: md5
+  md5: c1d96966f40249022efaa53bbd49760d
+  size: 85

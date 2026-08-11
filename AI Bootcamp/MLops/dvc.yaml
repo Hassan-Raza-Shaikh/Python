@@ -1,0 +1,31 @@
+stages:
+  preprocess:
+    cmd: venv/bin/python src/preprocess.py
+    deps:
+      - src/preprocess.py
+    params:
+      - data.test_size
+      - data.random_state
+    outs:
+      - data/raw
+      - data/processed
+
+  train:
+    cmd: venv/bin/python src/train.py
+    deps:
+      - src/train.py
+      - data/processed
+    params:
+      - train
+    outs:
+      - models/model.pkl
+
+  evaluate:
+    cmd: venv/bin/python src/evaluate.py
+    deps:
+      - src/evaluate.py
+      - models/model.pkl
+      - data/processed
+    metrics:
+      - models/metrics.json:
+          cache: false
