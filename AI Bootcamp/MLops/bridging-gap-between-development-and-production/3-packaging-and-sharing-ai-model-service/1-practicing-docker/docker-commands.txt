@@ -1,0 +1,54 @@
+Check Docker client and server veriosn
+docker version
+
+run:  Start a container
+docker run image
+ 
+--name:  Start a container with certain name
+docker run --name webapp <Image>
+ 
+:tag:  download or run specific version of image
+docker run <Image>:<tag>
+ 
+-it:  run docker container in interactive mode
+docker run -it <Image>
+
+ps: List running containers
+docker ps
+ 
+ps -a : List all containers
+docker ps -a
+ 
+stop: Stop a container
+docker stop <ID and NAME etc>
+  
+rm: Remove a container
+docker rm <ID and NAME etc>
+ 
+images: List images
+docker images
+ 
+rmi: Remove images
+docker rmi <Image ID, Name>
+ 
+pull: Download image
+docker pull <Image ID, Name>
+ 
+sleep: Append a command
+docker run <Image ID, Name> sleep 5
+ 
+exec: Execute a command
+docker exec <container ID, Name> cat /etc/hosts
+ 
+-d: Attach and detach container
+docker run -d <container ID, Name>
+ 
+attach: 
+docker attach <container ID, Name>
+ 
+ 
+inspect:  Inspect docker container
+docker inspect <container id, name>
+ 
+logs:  Container logs
+docker logs <container id, name>

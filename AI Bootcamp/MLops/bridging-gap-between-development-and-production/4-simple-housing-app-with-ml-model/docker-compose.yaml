@@ -1,0 +1,31 @@
+services:
+
+  frontend-with-ml-model:
+    image: nginx:1.29.0
+    container_name: frontend-with-ml-model
+    environment:
+      - API_URL=http://10.1.134.219:4001
+    volumes:
+      - ./2-frontend/nginx.template.conf:/etc/nginx/templates/default.conf.template
+      - ./2-frontend/src:/usr/share/nginx/html:ro
+    ports:
+      - 4000:80
+    depends_on:
+      - backend-with-ml-model
+
+  backend-with-ml-model:
+    image: housing-backend-app-with-ml-model
+    container_name: backend-with-ml-model
+    environment:
+      - MODEL_API_BASE_URL=http://10.1.134.219:4002
+    ports:
+      - 4001:80
+
+  ai-model-service:
+    image: housing-ai-model-service
+    container_name: housing-ai-model-service
+    env_file:
+      - ./4-ai-model-service/.env
+    ports:
+      - 4002:80
+    restart: always

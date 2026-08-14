@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Available Houses</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script src="/env.js"></script>
+  <h1>🏠 Available Houses</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="houses.html">Available Houses</a> |
+    <a href="predict.html">Predict House Price</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div id="house-list"></div>
+
+  <script>
+    async function loadHouses() {
+      const response = await fetch(window.API_URL + "/api/houses");
+      const data = await response.json();
+
+      const list = document.getElementById("house-list");
+      data.houses.forEach(h => {
+        const item = document.createElement("div");
+        item.className = "house-card";
+        item.innerHTML = `
+          <h3>${h.location}</h3>
+          <p>Bedrooms: ${h.bedrooms}</p>
+          <p>Price: $${h.price.toLocaleString()}</p>
+        `;
+        list.appendChild(item);
+      });
+    }
+    loadHouses();
+  </script>
+</body>
+</html>
